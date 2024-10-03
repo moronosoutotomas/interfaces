@@ -1,0 +1,58 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:131.0) Gecko/20100101 Firefox/131.0" version="24.7.17">
+  <diagram name="Página-1" id="SbdScXOYZH_T9qIS8_jn">
+    <mxGraphModel dx="988" dy="533" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-44" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-47" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="Homepage" style="whiteSpace=wrap;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="450" y="180" width="103" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-49" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="5" target="2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-50" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="680" y="300" width="117" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Contacto" style="whiteSpace=wrap;strokeWidth=2;" parent="MaoFT95jj4ktA7Ia1fc6-50" vertex="1">
+          <mxGeometry width="115" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-42" value="" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;" edge="1" parent="MaoFT95jj4ktA7Ia1fc6-50" source="MaoFT95jj4ktA7Ia1fc6-38" target="5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-38" value="&lt;ul&gt;&lt;li&gt;Email&lt;/li&gt;&lt;li&gt;Teléfono&lt;/li&gt;&lt;li&gt;Dirección&lt;/li&gt;&lt;li&gt;Ubicación&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=default;fillColor=default;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;gradientColor=none;shadow=0;glass=0;rounded=0;strokeWidth=1;perimeterSpacing=0;" vertex="1" parent="MaoFT95jj4ktA7Ia1fc6-50">
+          <mxGeometry y="130" width="117" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-51" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="440" y="300" width="123" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Camisetas" style="whiteSpace=wrap;strokeWidth=2;" parent="MaoFT95jj4ktA7Ia1fc6-51" vertex="1">
+          <mxGeometry width="123" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-41" value="" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;" edge="1" parent="MaoFT95jj4ktA7Ia1fc6-51" source="MaoFT95jj4ktA7Ia1fc6-37" target="4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-37" value="&lt;ul&gt;&lt;li&gt;Adulto&lt;br&gt;&lt;/li&gt;&lt;li&gt;Niño&lt;br&gt;&lt;/li&gt;&lt;li&gt;Outlet&lt;/li&gt;&lt;li&gt;2ª vida&lt;/li&gt;&lt;li&gt;Novedades&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=default;fillColor=default;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;gradientColor=none;" vertex="1" parent="MaoFT95jj4ktA7Ia1fc6-51">
+          <mxGeometry x="3" y="130" width="117" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-52" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="210" y="300" width="117" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Sobre nosotros" style="whiteSpace=wrap;strokeWidth=2;" parent="MaoFT95jj4ktA7Ia1fc6-52" vertex="1">
+          <mxGeometry x="7.5" width="102" height="49" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-40" value="" style="edgeStyle=none;shape=connector;curved=1;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;startArrow=none;endArrow=none;" edge="1" parent="MaoFT95jj4ktA7Ia1fc6-52" source="MaoFT95jj4ktA7Ia1fc6-39" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MaoFT95jj4ktA7Ia1fc6-39" value="&lt;ul&gt;&lt;li&gt;Historia&lt;/li&gt;&lt;li&gt;Equipo&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;strokeColor=default;fillColor=default;html=1;whiteSpace=wrap;verticalAlign=middle;overflow=hidden;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;gradientColor=none;" vertex="1" parent="MaoFT95jj4ktA7Ia1fc6-52">
+          <mxGeometry y="130" width="117" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
