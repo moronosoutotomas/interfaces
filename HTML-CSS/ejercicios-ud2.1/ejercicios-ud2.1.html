@@ -11,8 +11,12 @@
     }
 
     .respuesta {
-      color: rgb(50, 50, 250);
-      ;
+      background: rgb(255, 202, 197);
+      padding: 1%;
+    }
+
+    img {
+      width: 60%;
     }
   </style>
 </head>
@@ -42,7 +46,151 @@
   <h3>Ejercicio 4</h3>
   <p>Busca una página web que no esté en HTML5 e inspecciona su código fuente. ¿Cuáles son los cambios que realizarías
     en el código para convertirlo a HTML5?</p>
+  <p class="respuesta">En la primera línea del documento escribiría la etiqueta DOCTYPE correctamente y trataría de
+    reconstruír su estructura por etiquetas semánticas</p>
 
+  <h3>Ejercicio 5</h3>
+  <p>Realiza las siguientes listas:</p>
+  <p>a) Haz una lista ordenada de los cinco primeros países que vas a visitar en los
+    próximos años. En la lista ordenada usarás números.</p>
+  <ol class="respuesta">
+    <li>Alemania</li>
+    <li>Japón</li>
+    <li>Francia</li>
+    <li>Italia</li>
+    <li>Suíza</li>
+  </ol>
+
+  <p>b) Utilizando la lista anterior, invierte el orden de los números.</p>
+  <ol class="respuesta" reversed>
+    <li>Alemania</li>
+    <li>Japón</li>
+    <li>Francia</li>
+    <li>Italia</li>
+    <li>Suíza</li>
+  </ol>
+
+  <p>c) Haz una lista ordenada con letras en mayúscula de tus comidas favoritas.</p>
+
+  <ol class="respuesta" type="A">
+    <li>Pasta</li>
+    <li>Entrecot roquefort</li>
+    <li>Cocido</li>
+    <li>Huevos fritos con arroz a la cubana</li>
+  </ol>
+
+
+  <p>d) Utilizando la lista ordenada del apartado anterior, ahora ordena tus comidas
+    favoritas con números romanos en mayúscula.</p>
+  <ol class="respuesta" type="I">
+    <li>Pasta</li>
+    <li>Entrecot roquefort</li>
+    <li>Cocido</li>
+    <li>Huevos fritos con arroz a la cubana</li>
+  </ol>
+
+  <p>e) Haz una lista desordenada de tus películas favoritas. Utilizarás para el estilo
+    de la lista cuadraditos negros.</p>
+  <ul class="respuesta" type="square">
+    <li>Peli 1</li>
+    <li>Peli 2</li>
+    <li>Peli 3</li>
+    <li>Peli 4</li>
+  </ul>
+
+  <p>f) Usando como ejemplo la lista desordenada del ejercicio 5, ahora utiliza como
+    estilo de la lista puntos o circulitos negros.</p>
+  <ul class="respuesta" type="disc">
+    <li>Peli 1</li>
+    <li>Peli 2</li>
+    <li>Peli 3</li>
+    <li>Peli 4</li>
+  </ul>
+
+  <p>g) Haz una lista anidada de ciudades que quieres visitar en los próximos cinco
+    años de al menos tres países distintos.</p>
+  <ul class="respuesta">
+    <li>Alemania</li>
+    <ul>
+      <li>Ciudad 1</li>
+      <li>Ciudad 2</li>
+      <li>Ciudad 3</li>
+    </ul>
+    <li>Japón</li>
+    <ul>
+      <li>Ciudad 1</li>
+      <li>Ciudad 2</li>
+      <li>Ciudad 3</li>
+    </ul>
+    <li>Italia</li>
+    <ul>
+      <li>Ciudad 1</li>
+      <li>Ciudad 2</li>
+      <li>Ciudad 3</li>
+    </ul>
+  </ul>
+
+
+  <h3>Ejercicio 6</h3>
+  <p>Crea una página HTML5 con un formulario que contenga los siguientes elementos.
+    Al finalizar, valida tu código en el validador de w3c (https://validator.w3.org/), analiza
+    el resultado y adjúntalo a este ejercicio.</p>
+
+  <div class="respuesta">
+    <form action="#" method="get">
+      <label for="nombre">Nombre:</label>
+      <input type="text" name="nombre" id="nombre">
+      <br><br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+      <br><br>
+      <label for="descripcion">Descripción:</label>
+      <textarea name="descripcion" id="descripcion"></textarea>
+      <br><br>
+      <label for="fecha-nacimiento">Fecha de nacimiento:</label>
+      <input type="date" name="fecha-nacimiento" id="fecha-nacimiento">
+      <br><br>
+      <label for="color-favorito">Color favorito:</label>
+      <input type="color" name="color-favorito" id="color-favorito">
+      <br><br>
+      <label for="nivel">Nivel:</label>
+      <input type="range" name="nivel" id="nivel">
+    </form>
+    <br> <!-- Perdón xD-->
+
+    <img src="./img/captura-ejercicio-6.png" alt="Captura del validator">
+  </div>
+
+  <h3>Ejercicio 7</h3>
+  <p>Busca una página web en Internet, haz una captura de alguna de sus interfaces, y
+    señala donde se han usado las siguientes etiquetas semánticas: header, nav, article,
+    aside, footer, div, y main. ¿Se han usado correctamente dichas etiquetas? Razona tus
+    respuestas.</p>
+  <div class="respuesta">
+    <p>La web analizada fué <a href="https://rapidapi.com/blog/most-popular-api/">esta</a>.</p>
+
+    <p>Ejemplo de header: está bien usada.</p>
+    <img src="./img/captura-ejemplo-header.png" alt="...">
+
+    <p>Ejemplo de nav: está bien usada.</p>
+    <img src="./img/captura-ejemplo-nav.png" alt="...">
+
+    <p>Ejemplo de article: sí está bien usada.</p>
+    <img src="./img/captura-ejemplo-article.png" alt="...">
+
+    <p>Ejemplo de aside: no está bien usada porque tiene contenido del tema principal de la web.</p>
+    <img src="./img/captura-ejemplo-aside.png" alt="...">
+
+    <p>Ejemplo de footer: no está bien usada del todo, solo contiene algunas etiquetas contenidas en la web interesantes
+      para el usuario.</p>
+    <img src="./img/captura-ejemplo-footer.png" alt="...">
+
+    <p>Ejemplo de div: sí está bien usada.</p>
+    <img src="./img/captura-ejemplo-div.png" alt="...">
+
+    <p>Ejemplo de main: sí está bien usada.</p>
+    <img src="./img/captura-ejemplo-main.png" alt="...">
+  </div>
 
 </body>
 

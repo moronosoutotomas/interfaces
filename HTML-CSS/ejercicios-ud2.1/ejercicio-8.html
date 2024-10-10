@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Ejercicio 8</h1>
+
+  <form action="#" method="get">
+    <label for="select">Escoge algo:</label>
+    <select name="select" id="select">
+      <option value="" selected>--Opciones--</option>
+      <option value="algo1">Algo 1</option>
+      <option value="algo2">Algo 2</option>
+      <option value="algo3">Algo 3</option>
+    </select>
+    <br><br>
+
+    <textarea name="texto-cajoso" id="texto-cajoso" placeholder="Escriba aqui, señorite..." cols="50"
+      rows="8"></textarea>
+    <br><br>
+
+    <label for="texto">Texto:</label>
+    <input type="text" name="texto" id="texto">
+    <br><br>
+
+    <label for="boton">Botón:</label>
+    <input type="button" value="Púlsame :D" onclick="alert('Hola profe :D')">
+    <br><br>
+
+    <label for="cajitas">Cajita 1</label>
+    <input type="checkbox" name="cajitas" id="cajitas"><br>
+    <label for="cajitas">Cajita 2</label>
+    <input type="checkbox" name="cajitas" id="cajitas"><br>
+    <label for="cajitas">Cajita 3</label>
+    <input type="checkbox" name="cajitas" id="cajitas"><br>
+    <br><br>
+
+    <label for="circulitos">Circulito 1</label>
+    <input type="radio" name="circulitos" id="circulitos"><br>
+    <label for="circulitos">Circulito 2</label>
+    <input type="radio" name="circulitos" id="circulitos"><br>
+    <label for="circulitos">Circulito 3</label>
+    <input type="radio" name="circulitos" id="circulitos">
+    <br><br>
+
+    <label for="archivito">Sube un archivo:</label>
+    <input type="file" name="archivito" id="archivito">
+    <br><br>
+
+    <label for="animalitos">Escoge tu animal favorito</label>
+    <input list="animalitos" name="animal" id="animal">
+    <datalist id="animalitos">
+      <option value="perro">Perro</option>
+      <option value="gato">Gato</option>
+      <option value="pajaro">Pájaro</option>
+    </datalist>
+
+    <input type="submit" value="Enviar formulario">
+    <br><br>
+  </form>
+
+</body>
+
+</html>
