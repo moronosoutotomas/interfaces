@@ -6,18 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ejercicio 10</title>
   <style>
-    html {
-      font-family: sans-serif;
-    }
-
     table,
     th,
     td {
       border: 1px solid;
     }
 
-    td {
-      padding: 30px;
+    /* Este padding sobra, pero en mi pantalla de casa se veía demasiado enano sin ello */
+    td,
+    th {
+      padding: 1%;
+    }
+
+    img {
+      width: 200px;
+    }
+
+    /* El radius debería medirse en medidas relativas, no en medidas absolutas, sirva como ejemplo */
+    .color {
+      border-radius: 30px;
+    }
+
+    .gris {
+      background-color: gray;
+    }
+
+    .azul {
+      background-color: blue;
+    }
+
+    .verde {
+      background-color: green;
+    }
+
+    .rosa {
+      background-color: pink;
+    }
+
+    .negro {
+      background-color: black;
     }
   </style>
 </head>
@@ -28,39 +55,45 @@
 
   <table>
     <tr>
-      <td colspan="3">vacio</td>
-      <td colspan="3">mp3 mini</td>
-      <td colspan="2">mp3 grande</td>
+      <th colspan="3"></th>
+      <th colspan="3">
+        <img src="./img/mp3-mini.png" alt="...">
+        <p>MP3 mini</p>
+      </th>
+      <th colspan="2">
+        <img src="./img/mp3-grande.jpg" alt="...">
+        <p>MP3 grande</p>
+      </th>
     </tr>
     <tr>
-      <td colspan="3">capacidad</td>
-      <td>4gb</td>
-      <td>8gb</td>
-      <td>16gb</td>
-      <td>30gb</td>
-      <td>80gb</td>
+      <th colspan="3">Capacidad de almacenamiento</th>
+      <td>4GB (1000 canciones)</td>
+      <td>8GB (2000 canciones)</td>
+      <td>16GB (4000 canciones)</td>
+      <td>30GB (7500 canciones)</td>
+      <td>80GB (20000 canciones)</td>
       </td>
     </tr>
     <tr>
-      <td colspan="3">colores</td>
-      <td>gris</td>
-      <td>verde</td>
-      <td>azul</td>
-      <td>rosa</td>
-      <td>negro</td>
+      <th colspan="3">colores</th>
+      <td class="color gris"></td>
+      <td class="color verde"></td>
+      <td class="color azul"></td>
+      <td class="color rosa"></td>
+      <td class="color negro"></td>
     </tr>
     <tr>
-      <td colspan="3">pantalla</td>
-      <td colspan="3">lcd 3cm</td>
-      <td colspan="2">lcd 6cm</td>
+      <th colspan="3">Pantalla</th>
+      <td colspan="3">LCD de 3cm (diagonal) con retroiluminación</td>
+      <td colspan="2">LCD de 6cm (diagonal) con retroiluminación</td>
     </tr>
     <tr>
-      <td colspan="3" rowspan="2">tiempo de carga</td>
-      <td colspan="3" rowspan="2">3h</td>
-      <td colspan="2">4h</td>
+      <th colspan="3" rowspan="2">Tiempo de carga</th>
+      <td colspan="3" rowspan="2">Unas 3 horas</td>
+      <td colspan="2">Unas 4 horas</td>
     </tr>
     <tr>
-      <td colspan="2">2h</td>
+      <td colspan="2">Unas 2 horas para alcanzar el 80% de la capacidad</td>
     </tr>
   </table>
 
