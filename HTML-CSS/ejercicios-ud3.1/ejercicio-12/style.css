@@ -1,0 +1,23 @@
+.container1 {
+    background-color: yellowgreen;
+    padding: 10px;
+}
+
+.big-box {
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+    padding: 10px 5px 5px;
+}
+
+.container2 {
+    background-color: salmon;
+    padding: 10px 5px;
+}
+
+.lil-box {
+    border: 1px solid black;
+    background: white;
+    color: black;
+    padding: 25px 50px 75px 100px;
+}
