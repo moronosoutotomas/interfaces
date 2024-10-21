@@ -1,0 +1,16 @@
+html {
+  background-color: hsl(120, 100%, 25%, 0.4);
+}
+
+.columnas {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.columna-item {
+  border-radius: 1em;
+  border: 1px solid black;
+  padding: 1em;
+}
