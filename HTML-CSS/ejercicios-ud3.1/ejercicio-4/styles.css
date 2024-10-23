@@ -1,11 +1,11 @@
 div {
   color: red;
-  font: Verdana;
+  font-family: Verdana;
   opacity: 0.5;
 }
 
 body {
-  border-width: 10px;
+  border: 10px solid blue;
   border-color: blue;
   color: red;
 }
