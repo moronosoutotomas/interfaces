@@ -1,0 +1,26 @@
+html {
+  font-family: system-ui;
+  color: white;
+}
+
+p {
+  padding: 10px;
+  margin-left: 5em;
+  margin-right: 5em;
+  border-radius: 3px;
+}
+
+#uno,
+#tres,
+#cuatro {
+  background-color: blue;
+}
+
+#dos {
+  background-color: green;
+}
+
+#uno,
+#cuatro {
+  font-weight: bold
+}
