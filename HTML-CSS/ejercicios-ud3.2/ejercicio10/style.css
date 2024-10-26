@@ -1,0 +1,15 @@
+html {
+    font-family: system-ui;
+}
+
+:is(html) {
+    background-color: lightblue;
+}
+
+h1:algo {
+    display: block
+}
+
+div:has(p) {
+    background-color: lightgreen;
+}
