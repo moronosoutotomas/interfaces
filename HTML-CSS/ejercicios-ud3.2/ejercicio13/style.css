@@ -8,10 +8,6 @@ a {
   color: green;
 }
 
-a:link {
-  color: green;
-}
-
 a:visited {
   color: black;
   font-weight: bold;
