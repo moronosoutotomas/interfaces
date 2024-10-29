@@ -1,21 +1,60 @@
-.borde {
-    border: 1px solid blue;
+div {
+    width: 350px;
+    border: 2px solid rgb(105, 206, 240);
 }
 
-* {
+ol {
+    list-style-position: inside;
+    text-align: left;
+}
+
+li {
     font-weight: bold;
 }
 
-/*
-A cada item le aplicas estilos que hereda cada span
-*/
+li:nth-child(1) {
+    font-size: xx-small;
+}
 
-.span6::before {
-    content: " _";
-    font-size: 20px;
-    font-weight: normal;
+li:nth-child(2) {
+    font-size: x-small;
+}
 
-    /* Sin esto no funciona la propiedad "top" */
+li:nth-child(3) {
+    font-size: small;
+}
+
+li:nth-child(4) {
+    font-size: medium;
+}
+
+li:nth-child(5) {
+    font-size: large;
+}
+
+li:nth-child(6) {
+    font-size: x-large;
     position: relative;
-    top: 25px;
+}
+
+li:nth-child(6)::before {
+    content: "_ ";
+    position: relative;
+    top: 15px;
+}
+
+.extra-small {
+    padding-left: 15px;
+}
+
+.small {
+    padding-left: 13px;
+}
+
+.medium {
+    padding-left: 9px;
+}
+
+.large {
+    padding-left: 4px;
 }
