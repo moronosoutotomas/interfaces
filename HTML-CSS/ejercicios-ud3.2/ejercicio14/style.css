@@ -2,32 +2,20 @@
     border: 1px solid blue;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: 16px;
-    margin: 0;
+* {
+    font-weight: bold;
 }
 
-h2 {
-    font-size: 2em;
-}
+/*
+A cada item le aplicas estilos que hereda cada span
+*/
 
-h3 {
-    font-size: 3em;
-}
+.span6::before {
+    content: " _";
+    font-size: 20px;
+    font-weight: normal;
 
-h4 {
-    font-size: 4em;
-}
-
-h5 {
-    font-size: 5em;
-}
-
-h6 {
-    font-size: 6em;
+    /* Sin esto no funciona la propiedad "top" */
+    position: relative;
+    top: 25px;
 }
