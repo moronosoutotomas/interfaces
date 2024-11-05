@@ -1,0 +1,19 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-image: url("https://bit.ly/2slA7jo");
+  background-size: cover;
+  background-attachment: fixed;
+
+  padding-top: 700px;
+}
+
+p {
+  margin: 150px;
+}
+
+.fonditoVerde {
+  background-color: rgb(0, 128, 0, 0.3);
+}

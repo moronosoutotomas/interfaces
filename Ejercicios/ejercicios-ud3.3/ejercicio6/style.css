@@ -1,0 +1,13 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  background-image: url("https://bit.ly/2slA7jo");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p {
+  margin: 100px;
+}
