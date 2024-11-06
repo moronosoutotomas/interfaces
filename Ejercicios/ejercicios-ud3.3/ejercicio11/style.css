@@ -1,0 +1,23 @@
+/* p {
+  font: oblique bold 120% cursive;
+}
+
+p {
+  font: small-caps 100%/200% serif;
+}
+
+p {
+  font: monospace 150%;
+}
+
+p {
+  font: bold 90%;
+}
+
+p {
+  font: oblique 120% sans-serif bold;
+} */
+
+p {
+  font: 120% sans-serif small-caps;
+}

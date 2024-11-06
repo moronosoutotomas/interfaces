@@ -1,0 +1,27 @@
+html {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#container {
+  display: block;
+  margin: auto;
+  width: fit-content;
+  padding: 10px;
+  background: lightgrey;
+}
+
+#primer-li {
+  font-family: Helvetica;
+}
+
+#segundo-li {
+  font-family: Arial;
+}
+
+#big-span {
+  font-size: 1.5em;
+}
+
+#italic-span {
+  font-style: italic;
+}
