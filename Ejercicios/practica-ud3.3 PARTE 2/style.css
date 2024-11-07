@@ -1,20 +1,27 @@
+/* ESTILOS GLOBALES */
 * {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
+
+/* MOBILE FIRST */
 body {
-  background-color: #4a475c;
+  background-color: #4a465b;
+}
+
+p {
+  line-height: 27px;
 }
 
 .contenedor {
-  margin: 1em 10em;
+  margin: 1em 1em;
 }
 
+/* NAVEGACIÓN */
 nav {
-  margin: 0;
-  padding: 0;
   overflow: auto;
   background: white;
 
@@ -42,39 +49,40 @@ nav a:hover {
   background-color: black;
 }
 
+/* SECCIÓN PRINCIPAL */
 .main {
   background: white;
-  float: left;
-  width: 75%;
+  width: 100%;
 }
 
 .imagen img {
   width: 100%;
 }
 
+/* SECCIÓN CON LOS POSTS */
 .posts {
   padding: 2em 3em;
 
   h2,
   p {
     margin-bottom: 0.5em;
-    line-height: 1.8;
+    /*line-height: 1.8;*/
   }
 }
 
+/* LATERAL CON ARTICULOS DESTACADOS */
 aside {
-  float: right;
-  width: 25%;
-  background-color: #171e26;
+  width: 100%;
+  background-color: #161f26;
 }
 
 .widget {
   padding: 1em;
-  line-height: 1.2;
+  /*line-height: 1.2;*/
 
   .titulo {
-    color: #ca7920;
-    border-bottom: 1px solid #ca7920;
+    color: #ff8000;
+    border-bottom: 1px solid #ff8000;
   }
 
   li {
@@ -91,19 +99,20 @@ aside {
   }
 
   li a:hover {
-    color: #8f8f89;
+    color: #8f8f8f;
   }
 
   p {
     color: white;
-    line-height: 1.5;
     margin-top: 1em;
+    /*line-height: 1.5;*/
   }
 }
 
+/* PIE DE PÁGINA */
 footer {
-  width: 75%;
   clear: both;
+  width: 100%;
   color: white;
   background: black;
 }
@@ -111,4 +120,28 @@ footer {
 footer p {
   padding: 15px 0;
   text-align: center;
+}
+
+
+/* MEDIA QUERY DESKTOP (pantallas con ancho superior a 800px) */
+@media screen and (min-width: 800px) {
+
+  .contenedor {
+    margin: 1em 10em;
+  }
+
+  .main {
+    float: left;
+    width: 75%;
+  }
+
+  aside {
+    float: right;
+    width: 25%;
+  }
+
+  footer {
+    clear: both;
+    width: 75%;
+  }
 }
