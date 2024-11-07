@@ -1,0 +1,15 @@
+html {
+  font-family: system-ui, sans-serif;
+}
+
+div {
+  overflow: auto;
+}
+
+a.anterior {
+  float: left;
+}
+
+a.siguiente {
+  float: right;
+}
