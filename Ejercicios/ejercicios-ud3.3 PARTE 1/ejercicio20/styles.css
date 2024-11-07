@@ -1,0 +1,6 @@
+.content-box {
+  background-color: lightblue;
+  width: 500px;
+  height: 200px;
+  overflow-y: scroll;
+}
