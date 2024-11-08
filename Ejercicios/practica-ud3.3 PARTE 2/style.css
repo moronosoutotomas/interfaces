@@ -1,4 +1,4 @@
-/* ESTILOS GLOBALES */
+/* ESTILOS GLOBALES Y RESET */
 * {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -17,7 +17,8 @@ p {
 }
 
 .contenedor {
-  margin: 1em 1em;
+  margin: 1em auto auto auto;
+  width: 80%;
 }
 
 /* NAVEGACIÓN */
@@ -125,10 +126,6 @@ footer p {
 
 /* MEDIA QUERY DESKTOP (pantallas con ancho superior a 800px) */
 @media screen and (min-width: 800px) {
-
-  .contenedor {
-    margin: 1em 10em;
-  }
 
   .main {
     float: left;
