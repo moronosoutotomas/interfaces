@@ -1,0 +1,41 @@
+* {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.styled-table {
+  width: 80%;
+  margin-top: 20px;
+}
+
+.styled-table caption {
+  caption-side: bottom;
+}
+
+.styled-table thead {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.styled-table th,
+.styled-table td {
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.styled-table th {
+  background-color: #009688;
+  color: #fff;
+}
+
+.styled-table tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.styled-table tr:hover {
+  background-color: #c7e2e0;
+}
+
+.styled-table tr td:nth-child(3)::after {
+  content: "€";
+}
