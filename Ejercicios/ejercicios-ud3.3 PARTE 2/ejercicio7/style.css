@@ -1,0 +1,15 @@
+:root {
+  --width-default: 300px;
+}
+
+.fixed-container {
+  box-sizing: border-box;
+  width: var(--width-default);
+  background: #3498db;
+}
+
+.variable-container {
+  box-sizing: border-box;
+  width: calc(100% - var(--width-default));
+  background: #e74c3c;
+}
