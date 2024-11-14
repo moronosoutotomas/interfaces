@@ -1,0 +1,24 @@
+.container {
+  background-color: lightgreen;
+}
+
+#image1 {
+  display: block;
+  margin: auto;
+  width: 30%;
+  mix-blend-mode: multiply;
+}
+
+#image2 {
+  display: block;
+  margin: auto;
+  width: 30%;
+  mix-blend-mode: color-dodge;
+}
+
+#image3 {
+  display: block;
+  margin: auto;
+  width: 30%;
+  mix-blend-mode: difference;
+}

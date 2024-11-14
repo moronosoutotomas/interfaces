@@ -1,0 +1,20 @@
+#image1 {
+  float: left;
+  margin: 1.5%;
+  width: 30%;
+  filter: blur(2px);
+}
+
+#image2 {
+  float: left;
+  margin: 1.5%;
+  width: 30%;
+  filter: grayscale(50%);
+}
+
+#image3 {
+  float: left;
+  margin: 1.5%;
+  width: 30%;
+  filter: sepia(50%);
+}
