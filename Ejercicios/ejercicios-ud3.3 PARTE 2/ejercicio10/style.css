@@ -1,5 +1,7 @@
-#bug {
-  width: 100px;
+svg {
+  display: block;
+  margin: auto;
+  width: 500px;
   height: auto;
   fill: red;
   opacity: 0.6;

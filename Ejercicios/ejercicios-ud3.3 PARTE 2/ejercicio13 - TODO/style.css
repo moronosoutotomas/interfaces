@@ -25,3 +25,15 @@
 .filtered-image {
   filter: brightness(80%) contrast(120%);
 }
+
+.tooltip-container {
+  background-color: burlywood;
+}
+
+.tooltip-text {
+  visibility: hidden;
+}
+
+.tooltip-text:hover {
+  visibility: visible;
+}
