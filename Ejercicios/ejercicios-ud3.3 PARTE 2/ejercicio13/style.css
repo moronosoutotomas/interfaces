@@ -27,13 +27,13 @@
 }
 
 .tooltip-container {
-  background-color: burlywood;
+  color: white;
+  background-color: #a52a2a;
 }
 
 .tooltip-text {
+  position: absolute;
   visibility: hidden;
-}
-
-.tooltip-text:hover {
-  visibility: visible;
+  left: 20px;
+  bottom: 50px;
 }
