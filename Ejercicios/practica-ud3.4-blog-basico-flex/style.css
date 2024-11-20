@@ -1,0 +1,147 @@
+/*
+******************
+REQUISITOS MÍNIMOS
+******************
+*/
+
+* {
+  box-sizing: border-box;
+  font-family: Open Sans;
+  font-weight: 400;
+  color: black;
+}
+
+/* imagen con fondo estatico que no se mueve al scrollear */
+body {
+  background-image: url(./imagenes/fondo.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* links de la cabecera */
+header nav a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* colores */
+:root {
+  --fondo-aside: #537dca;
+  --fondo-ads: #4264a2;
+  --fondo-footer: rgba(255, 255, 255, .2);
+}
+
+
+/*
+***********************************************************
+VERSIÓN MÓVIL
+El aside desaparece por completo a diferencia del enunciado
+***********************************************************
+*/
+@media screen and (max-width: 400px) {
+  aside {
+    display: none;
+  }
+}
+
+
+/*
+************************************
+VERSIÓN TABLET
+logo + navegacion + footer centrados
+************************************
+*/
+@media screen and (max-width: 600px) {}
+
+
+/*
+***************
+VERSIÓN DESKTOP
+***************
+*/
+
+header {
+  background-color: var(--fondo-footer);
+}
+
+main {
+  background-color: white;
+  /* margin-top: 3em; */
+}
+
+aside {
+  background-color: var(--fondo-aside);
+}
+
+aside .ad p {
+  background-color: var(--fondo-ads);
+  color: white;
+}
+
+footer {
+  background-color: var(--fondo-footer);
+}
+
+.contenedor {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 3em 8em 2em;
+  gap: 1em 0em;
+}
+
+header {
+  display: flex;
+  flex: 1 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+header .logo {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+header .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 35%;
+}
+
+main {
+  flex: 2;
+  padding: 1em;
+}
+
+main img {
+  width: 100%;
+}
+
+main article p {
+  line-height: 1.6;
+}
+
+/* LOOK termina de arreglar el aside */
+aside {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  flex: 1;
+}
+
+aside p {
+  height: 10em;
+  text-align: center;
+}
+
+footer {
+  flex: 1 100%;
+  ;
+}
