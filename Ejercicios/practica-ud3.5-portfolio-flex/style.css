@@ -8,6 +8,18 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+:root {
+  --titulo-naranja: #dd820d;
+  --texto-gris: #5a5a5a;
+  --varios-azul: #3895EA;
+  --titulo-trabajos: #323068;
+  --subtitulo-gris: #636363;
+  --fotos-fondo: #f2f2f2;
+  --form-border: #cecece;
+  --enviar-hover: #387bea;
+  --footer: #1e2b38;
+}
+
 h1 {
   font-size: 35px;
 }
@@ -29,5 +41,120 @@ h3 {
 }
 
 .menu a:hover {
-  border-bottom: 1px solid white;
+  border-bottom: 2px solid white;
 }
+
+/* ====================================================== *\
+ * RESPONSIVE LAYOUT: MOBILE CONFIGURATION                *
+ * Viewport Range: under 500px                            *
+ * Breakpoint Strategy: Mobile first                      *
+\* ====================================================== */
+
+/* @media screen and (max-width: 500px) {} */
+
+header {
+  background: url(img/bg.jpg);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  height: 60vh;
+
+  .contenedor {
+    display: flex;
+    flex-flow: column wrap;
+
+    .menu {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 6em;
+
+      a {
+        color: white;
+        font-weight: 500;
+        padding-bottom: 0.5em;
+      }
+    }
+
+    .contenedor-texto {
+      display: flex;
+      justify-content: space-around;
+
+      .texto {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid white;
+        border-radius: 3px;
+        width: 75%;
+        margin-top: 15em;
+
+        .nombre,
+        .profesion {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+main {
+  section.acerca-de {
+    height: 40vh;
+
+    .contenedor {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-evenly;
+      align-items: center;
+
+      .foto {
+        height: 10em;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .texto {
+        width: 70%;
+        text-align: center;
+        line-height: 1.5;
+
+        .titulo {
+          color: var(--titulo-naranja);
+          font-weight: 300;
+        }
+
+        p span.bold {
+          color: var(--varios-azul);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  section.trabajos {
+    /* LOOK vas por aqui xD */
+  }
+}
+
+/* ====================================================== *\
+ * RESPONSIVE LAYOUT: TABLET CONFIGURATION                *
+ * Viewport Range: from 500px to 800px                    *
+\* ====================================================== */
+
+/* @media screen and (min-width: 501px) {} */
+
+
+
+/* ====================================================== *\
+ * RESPONSIVE LAYOUT: DESKTOP CONFIGURATION               *
+ * Viewport Range: over 800px                             *
+\* ====================================================== */
+
+/* @media screen and (min-width: 801px) {} */
