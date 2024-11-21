@@ -5,15 +5,17 @@ REQUISITOS MÍNIMOS
 */
 
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: Open Sans;
+  font-family: 'Open Sans';
   font-weight: 400;
   color: black;
 }
 
 /* imagen con fondo estatico que no se mueve al scrollear */
 body {
-  background-image: url(./imagenes/fondo.jpg);
+  background: black url(./imagenes/fondo.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -35,28 +37,6 @@ header nav a:hover {
   --fondo-ads: #4264a2;
   --fondo-footer: rgba(255, 255, 255, .2);
 }
-
-
-/*
-***********************************************************
-VERSIÓN MÓVIL
-El aside desaparece por completo a diferencia del enunciado
-***********************************************************
-*/
-@media screen and (max-width: 400px) {
-  aside {
-    display: none;
-  }
-}
-
-
-/*
-************************************
-VERSIÓN TABLET
-logo + navegacion + footer centrados
-************************************
-*/
-@media screen and (max-width: 600px) {}
 
 
 /*
@@ -128,20 +108,106 @@ main article p {
   line-height: 1.6;
 }
 
-/* LOOK termina de arreglar el aside */
 aside {
   display: flex;
   flex-flow: column wrap;
   justify-content: space-between;
   flex: 1;
+  padding: 1em;
 }
 
-aside p {
-  height: 10em;
+aside .ad p {
+  margin: 0;
+  height: 8em;
+  font-size: larger;
   text-align: center;
 }
 
 footer {
+  display: flex;
+  flex-flow: row wrap;
   flex: 1 100%;
-  ;
+  justify-content: space-between;
+}
+
+footer div {
+  flex-flow: row wrap;
+  align-content: center;
+}
+
+footer div * {
+  color: white;
+  margin: 1em;
+}
+
+
+/*
+************************************
+VERSIÓN TABLET
+logo + navegacion + footer centrados
+************************************
+*/
+@media screen and (max-width: 600px) {
+  .contenedor {
+    flex-flow: column wrap;
+    padding: 3em 1em;
+  }
+
+  header {
+    flex-flow: column wrap;
+    background: none;
+  }
+
+  header .logo {
+    justify-content: center;
+    margin: 2em 0;
+  }
+
+  header .menu {
+    background: var(--fondo-footer);
+    width: 100%;
+    height: 4em;
+  }
+
+  aside {
+    flex-flow: row wrap;
+  }
+
+  aside .ad {
+    width: 40%;
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+  }
+
+  footer .autor {
+    order: 2;
+  }
+
+  footer .redes-sociales {
+    order: 1;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+
+/*
+***********************************************************
+VERSIÓN MÓVIL
+El aside desaparece por completo a diferencia del enunciado
+***********************************************************
+*/
+@media screen and (max-width: 400px) {
+
+  aside {
+    display: none;
+  }
+
+
 }
