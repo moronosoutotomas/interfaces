@@ -91,7 +91,7 @@ header {
         border: 1px solid white;
         border-radius: 3px;
         width: 75%;
-        margin-top: 15em;
+        margin-top: 9em;
 
         .nombre,
         .profesion {
@@ -113,6 +113,11 @@ main {
       align-items: center;
 
       .foto {
+        position: relative;
+
+        /* LOOK esto puede cascar al redimensionar */
+        top: -3.75em;
+
         height: 10em;
 
         img {
@@ -139,7 +144,49 @@ main {
   }
 
   section.trabajos {
-    /* LOOK vas por aqui xD */
+    background-color: var(--fotos-fondo);
+
+    div.contenedor {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-content: center;
+      height: 120vh;
+
+      h3.titulo {
+        font-weight: 300;
+        text-align: center;
+      }
+
+      div.contenedor-trabajos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+
+        div.trabajo {
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-content: center;
+          width: 40%;
+          height: 220px;
+
+          div.thumb {
+            display: flex;
+            justify-content: center;
+
+            img {
+              border-radius: 3px;
+              width: 80%;
+            }
+          }
+
+          div.descripcion p {
+            text-align: center;
+          }
+        }
+      }
+    }
   }
 }
 
