@@ -18,6 +18,13 @@
   --form-border: #cecece;
   --enviar-hover: #387bea;
   --footer: #1e2b38;
+
+  /* Color :hover RRSS */
+  --twitter: #55acee;
+  --facebook: #3b5998;
+  --youtube: #cd201f;
+  --github: #666666;
+  --instagram: #3f729b;
 }
 
 h1 {
@@ -130,9 +137,10 @@ main {
         text-align: center;
         line-height: 1.5;
 
-        .titulo {
+        h3.titulo {
           color: var(--titulo-naranja);
           font-weight: 300;
+          margin-bottom: 1em;
         }
 
         p span.bold {
@@ -184,6 +192,10 @@ main {
           }
 
           div.descripcion {
+
+            p {
+              margin: 5px 0 10px 0;
+            }
 
             p.nombre {
               text-align: center;
@@ -274,6 +286,11 @@ footer {
       justify-content: space-evenly;
       padding-top: 4em;
 
+      a {
+        padding: 10px 20px;
+        border-radius: 3px;
+      }
+
       a i {
         color: white;
         font-size: 32px;
@@ -281,12 +298,28 @@ footer {
       }
 
       .twitter:hover {
-        /* background: blue; */
+        background: var(--twitter);
+      }
+
+      .facebook:hover {
+        background: var(--facebook);
+      }
+
+      .youtube:hover {
+        background: var(--youtube);
+      }
+
+      .github:hover {
+        background: var(--github);
+      }
+
+      .instagram:hover {
+        background: var(--instagram);
       }
     }
   }
 }
-}
+
 
 /* ====================================================== *\
  * RESPONSIVE LAYOUT: TABLET CONFIGURATION                *
