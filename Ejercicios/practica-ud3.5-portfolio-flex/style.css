@@ -57,15 +57,10 @@ h3 {
  * Breakpoint Strategy: Mobile first                      *
 \* ====================================================== */
 
-/* @media screen and (max-width: 500px) {} */
-
 header {
-  background: url(img/bg.jpg);
-
+  background: url(img/bg.jpg) var(--varios-azul);
   background-repeat: no-repeat;
   background-size: cover;
-
-  color: white;
   height: 60vh;
 
   .contenedor {
@@ -103,6 +98,7 @@ header {
         .nombre,
         .profesion {
           font-weight: 300;
+          color: white;
         }
       }
     }
@@ -179,7 +175,8 @@ main {
           justify-content: center;
           align-content: center;
           width: 40%;
-          height: 220px;
+          height: auto;
+          margin-bottom: 1em;
 
           div.thumb {
             display: flex;
@@ -249,6 +246,12 @@ footer {
         width: 48%;
         height: 3em;
         padding: 0.250em 0 0 1em;
+      }
+
+      input:focus,
+      textarea:focus {
+        outline: none;
+        border: 1px solid black;
       }
 
       textarea {
@@ -321,13 +324,59 @@ footer {
 }
 
 
+
 /* ====================================================== *\
  * RESPONSIVE LAYOUT: TABLET CONFIGURATION                *
  * Viewport Range: from 500px to 800px                    *
 \* ====================================================== */
 
-/* @media screen and (min-width: 501px) {} */
+@media screen and (min-width: 501px) {
 
+  footer {
+    section.redes-sociales {
+      background-color: var(--footer);
+      height: 10em;
+
+      div.contenedor {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        padding-top: 4em;
+
+        a {
+          padding: 10px 20px;
+          border-radius: 3px;
+        }
+
+        a i {
+          color: white;
+          font-size: 32px;
+          width: 30%;
+        }
+
+        .twitter:hover {
+          background: var(--twitter);
+        }
+
+        .facebook:hover {
+          background: var(--facebook);
+        }
+
+        .youtube:hover {
+          background: var(--youtube);
+        }
+
+        .github:hover {
+          background: var(--github);
+        }
+
+        .instagram:hover {
+          background: var(--instagram);
+        }
+      }
+    }
+  }
+}
 
 
 /* ====================================================== *\
@@ -335,4 +384,53 @@ footer {
  * Viewport Range: over 800px                             *
 \* ====================================================== */
 
-/* @media screen and (min-width: 801px) {} */
+@media screen and (min-width: 801px) {
+
+  main {
+    section.trabajos {
+      div.contenedor {
+        div.contenedor-trabajos {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+
+          div.trabajo {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 1em;
+            width: 25%;
+
+            div.thumb {
+              display: flex;
+              justify-content: center;
+
+              img {
+                border-radius: 3px;
+                width: 80%;
+              }
+            }
+
+            div.descripcion {
+
+              p {
+                margin: 5px 0 10px 0;
+              }
+
+              p.nombre {
+                text-align: center;
+                color: var(--varios-azul);
+              }
+
+              p.categoria {
+                text-align: center;
+                color: var(--subtitulo-gris);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
