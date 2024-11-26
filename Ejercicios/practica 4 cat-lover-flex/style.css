@@ -30,13 +30,19 @@ footer div.footer-menu div a:hover {
   cursor: pointer;
 }
 
-.search input {
+header .search input {
   border-radius: 4px;
   height: 2em;
+  transition: 0.25 ease-in-out;
+
+}
+
+header .search input:hover {
+  transform: scale(1.1);
 }
 
 header .logo a img {
-  transition: transform 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 header .logo:hover a img {
@@ -87,6 +93,13 @@ header {
       margin: 0 1em;
       color: white;
       font-size: larger;
+      transition: 0.25s ease-in-out;
+
+      :hover {
+        transform: scale(1.3);
+        color: var(--hover-light);
+        cursor: pointer;
+      }
     }
 
     /* Girar la lupa */
@@ -95,6 +108,13 @@ header {
     }
   }
 }
+
+/* @media screen and (min-width: 600px) {
+  header .search button:last-child {
+    display: none;
+  }
+} */
+
 
 .cta-container {
   background-image: url(gato-fondo-e1701355048196.jpg);
