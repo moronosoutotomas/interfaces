@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 2</title>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-areas:
+        'header header header header header'
+        'celda2 celda3 celda3 celda4 celda4'
+        'celda2 celda5 celda5 celda6 celda6';
+      grid-gap: 2px;
+      padding: 10px;
+      background-color: white;
+      width: 600px;
+      height: 300px;
+
+      /* justify-items: stretch;
+      no se te rompería todo si no fueran divs con texto plano
+      */
+    }
+
+    .celda {
+      color: white;
+      background-color: #697c88;
+      text-align: center;
+      align-content: center;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .celda2 {
+      grid-area: celda2;
+    }
+
+    .celda3 {
+      grid-area: celda3;
+    }
+
+    .celda4 {
+      grid-area: celda4;
+    }
+
+    .celda5 {
+      grid-area: celda5;
+    }
+
+    .celda6 {
+      grid-area: celda6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="celda header">Usando grid-areas</div>
+    <div class="celda celda2">celda 2</div>
+    <div class="celda celda3">celda 3</div>
+    <div class="celda celda4">celda 4</div>
+    <div class="celda celda5">celda 5</div>
+    <div class="celda celda6">celda 6</div>
+  </div>
+
+</body>
+
+</html>

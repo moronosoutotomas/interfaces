@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 4</title>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-areas:
+        'celda1 celda2 celda2'
+        'celda3 celda4 celda4'
+        'celda5 celda4 celda4';
+      grid-gap: 2px;
+      padding: 10px;
+      background-color: white;
+      width: 600px;
+      height: 300px;
+    }
+
+    .celda {
+      color: white;
+      background-color: #697c88;
+      text-align: center;
+      align-content: center;
+      padding: 1em;
+    }
+
+    .celda1 {
+      grid-area: celda1;
+    }
+
+    .celda2 {
+      grid-area: celda2;
+    }
+
+    .celda3 {
+      grid-area: celda3;
+    }
+
+    .celda4 {
+      grid-area: celda4;
+      justify-items: stretch;
+    }
+
+    .celda5 {
+      grid-area: celda5;
+    }
+
+    .grid-anidado {
+      display: grid;
+      grid-template-areas:
+        'celda-anidada1 celda-anidada1 '
+        'celda-anidada2 celda-anidada3'
+        'celda-anidada4 celda-anidada5';
+      grid-gap: 2px;
+      background-color: #fff;
+      justify-items: stretch;
+    }
+
+    .celda-anidada {
+      background-color: #dbdaf5;
+      color: black;
+      align-content: center;
+      padding: 1em;
+    }
+
+    .celda-anidada1 {
+      grid-area: celda-anidada1;
+    }
+
+    .celda-anidada2 {
+      grid-area: celda-anidada2;
+    }
+
+    .celda-anidada3 {
+      grid-area: celda-anidada3;
+    }
+
+    .celda-anidada4 {
+      grid-area: celda-anidada4;
+    }
+
+    .celda-anidada5 {
+      grid-area: celda-anidada5;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div class="celda celda1">celda1</div>
+    <div class="celda celda2">celda 2</div>
+    <div class="celda celda3">celda 3</div>
+    <div class="celda celda4">
+      <div class="grid-anidado">
+        <div class="celda-anidada celda-anidada1">Grid Anidado</div>
+        <div class="celda-anidada celda-anidada2">Lista 2</div>
+        <div class="celda-anidada celda-anidada3">Lista 3</div>
+        <div class="celda-anidada celda-anidada4">Lista 4</div>
+        <div class="celda-anidada celda-anidada5">Lista 5</div>
+      </div>
+    </div>
+    <div class="celda celda5">celda 5</div>
+  </div>
+
+</body>
+
+</html>

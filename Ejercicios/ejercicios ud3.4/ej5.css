@@ -1,0 +1,80 @@
+:root {
+  --body: #f0f0f0;
+  --header: #007bff;
+  --main: #28a745;
+  --ad: #6c757d;
+  --footer: #dc3545;
+}
+
+/*
+***********************
+* ESTILOS OBLIGATORIOS
+***********************
+*/
+
+body {
+  background-color: var(--body);
+  height: 100vh;
+}
+
+.header {
+  background-color: var(--header);
+}
+
+.main {
+  background-color: var(--main);
+}
+
+.aside.ad {
+  background-color: var(--ad);
+}
+
+.footer {
+  background-color: var(--footer);
+}
+
+/*
+*********************
+* Breakpoint < 500px
+*********************
+*/
+
+body {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+}
+
+.header-nav {
+  grid-area: header;
+}
+
+.content {
+  grid-area: content;
+
+  .aside {
+    display: none;
+  }
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/*
+*********************
+* Breakpoint < 800px
+*********************
+*/
+
+@media and (min-width: 500px) {}
+
+/*
+*********************
+* Breakpoint > 800px
+*********************
+*/
+
+@media and (min-width: 800px) {}
