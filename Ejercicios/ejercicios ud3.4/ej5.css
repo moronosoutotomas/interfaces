@@ -6,22 +6,46 @@
   --footer: #dc3545;
 }
 
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  font-size: 20px;
+  color: white;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    list-style: none;
+  }
+}
+
 /*
 ***********************
 * ESTILOS OBLIGATORIOS
 ***********************
+
+Las instrucciones son las siguientes:
+• Utiliza una altura mínima de 100vh para el body.
+• Utiliza como mínimo las siguientes propiedades de GRID:
+  o grid-template-rows y grid-template-columns
+  o unidades fr
+  o gap
+  o justify-content
 */
 
 body {
   background-color: var(--body);
   height: 100vh;
+
 }
 
-.header {
+.header-nav {
   background-color: var(--header);
 }
 
-.main {
+.content {
   background-color: var(--main);
 }
 
@@ -32,6 +56,8 @@ body {
 .footer {
   background-color: var(--footer);
 }
+
+
 
 /*
 *********************
@@ -45,14 +71,38 @@ body {
     'header'
     'content'
     'footer';
+  gap: 0.5em;
 }
 
 .header-nav {
   grid-area: header;
+
+  justify-items: center;
+
+  .header {
+    display: grid;
+    justify-items: center;
+
+    .logo {
+      font-size: 2em;
+      font-weight: bold;
+    }
+  }
+
+  .nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    padding: 0;
+  }
 }
 
 .content {
   grid-area: content;
+
+  .main {
+    margin: 1em;
+  }
 
   .aside {
     display: none;
@@ -61,6 +111,7 @@ body {
 
 .footer {
   grid-area: footer;
+  text-align: center;
 }
 
 /*
@@ -69,7 +120,7 @@ body {
 *********************
 */
 
-@media and (min-width: 500px) {}
+@media screen and (min-width: 500px) {}
 
 /*
 *********************
@@ -77,4 +128,4 @@ body {
 *********************
 */
 
-@media and (min-width: 800px) {}
+@media screen and (min-width: 800px) {}
