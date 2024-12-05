@@ -79,17 +79,26 @@ footer {
 } */
 
 header {
-  display: flex;
+  /* display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-content: center;
+  align-content: center; */
+  display: grid;
+  grid-template-areas:
+    'nav logo search';
   padding: 0.5em;
 
   nav {
+    grid-area: nav;
     display: none;
   }
 
+  .logo {
+    grid-area: logo;
+  }
+
   .search {
+    grid-area: search;
     display: flex;
     justify-content: center;
 
