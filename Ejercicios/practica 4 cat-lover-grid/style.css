@@ -1,0 +1,336 @@
+/*
+* ********************* *
+*  Estilos obligatorios *
+* ********************* *
+*/
+
+:root {
+  --primary-blue: #074167;
+  --dark-blue: #143548;
+  --background-light: #ffebd9;
+  --hover-light: #CCB299;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+h1 {
+  text-shadow: 8px 4px 6px --hover-light;
+}
+
+header ul.menu li a:hover,
+footer div.footer-copy div.social-icons a:hover,
+footer div.footer-menu div a:hover {
+  color: var(--hover-light);
+  cursor: pointer;
+}
+
+header .search input {
+  border-radius: 4px;
+  height: 2em;
+  transition: 0.25 ease-in-out;
+
+}
+
+header .search input:hover {
+  transform: scale(1.1);
+}
+
+header .logo a img {
+  transition: 0.25s ease-in-out;
+}
+
+header .logo:hover a img {
+  transform: rotate(360deg);
+}
+
+
+/*
+* ********* *
+*  Colores  *
+* ********* *
+*/
+
+* {
+  color: white;
+}
+
+header,
+footer {
+  background-color: var(--dark-blue);
+}
+
+.footer-copy {
+  background-color: var(--primary-blue);
+}
+
+
+/*
+* ******************************** *
+*  Ancho inferior o igual a 600px  *
+* ******************************** *
+*/
+
+/* body {
+  display: flex;
+  flex-flow: column nowrap;
+} */
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+  padding: 0.5em;
+
+  nav {
+    display: none;
+  }
+
+  .search {
+    display: flex;
+    justify-content: center;
+
+    button {
+      border: none;
+      background: none;
+      font-size: 1.25em;
+      margin-right: 0.5em;
+      transition: 0.25s ease-in-out;
+
+      :hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
+    }
+
+    :nth-child(2) {
+      transform: rotate(90deg);
+    }
+
+    input {
+      display: none;
+    }
+  }
+}
+
+/* esto equivaldría al main */
+.cta-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: end;
+
+  background-image: url(gato-fondo-e1701355048196.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: sepia(30%);
+  height: 50em;
+
+  h1 {
+    padding-bottom: 1em;
+    font-size: 4em;
+    color: var(--dark-blue);
+    text-shadow: 8px 4px 6px #CCB299;
+  }
+}
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+
+  .footer-copy {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+
+    h3 {
+      margin: 0;
+      font-weight: 700;
+    }
+
+    .social-icons {
+      margin-top: 0.75em;
+
+      a {
+        margin: 0.5em;
+
+        i {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+  .footer-menu {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 1em;
+
+    div {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+      }
+
+      h3 {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+
+/*
+* ************************ *
+*  Ancho superior a 600px  *
+* ************************ *
+*/
+
+@media screen and (min-width: 601px) {
+
+  body {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0.5em;
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+
+        li {
+          list-style: none;
+          margin: 0 0.5em;
+
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .search {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      button {
+        border: none;
+        background: none;
+        font-size: 1.25em;
+        margin-right: 0.5em;
+        transition: 0.25s ease-in-out;
+
+        :hover {
+          cursor: pointer;
+          transform: scale(1.2);
+        }
+      }
+
+      :nth-child(2) {
+        transform: rotate(90deg);
+      }
+
+      input {
+        display: flex;
+      }
+    }
+  }
+
+  /* esto equivaldría al main */
+  .cta-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: end;
+
+    background-image: url(gato-fondo-e1701355048196.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    filter: sepia(30%);
+    height: 50em;
+
+    h1 {
+      padding-bottom: 1em;
+      font-size: 4em;
+      color: var(--dark-blue);
+      text-shadow: 8px 4px 6px #CCB299;
+    }
+  }
+
+  footer {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .footer-copy {
+      display: flex;
+      flex-flow: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1em 0;
+
+      h3 {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .social-icons {
+        margin-top: 0.75em;
+
+        a {
+          margin: 0.5em;
+
+          i {
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+
+    .footer-menu {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-around;
+      padding: 1.5em 0 2.5em 0;
+
+      div {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+
+        a {
+          text-decoration: none;
+        }
+
+        h3 {
+          margin: 0.5em 0;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+}
