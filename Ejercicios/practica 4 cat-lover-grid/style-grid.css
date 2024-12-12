@@ -1,0 +1,257 @@
+/*
+* ********************* *
+*  Estilos obligatorios *
+* ********************* *
+*/
+
+:root {
+  --primary-blue: #074167;
+  --dark-blue: #143548;
+  --background-light: #ffebd9;
+  --hover-light: #CCB299;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+h1 {
+  text-shadow: 8px 4px 6px var(--hover-light);
+}
+
+header ul.menu li a:hover,
+footer div.footer-copy div.social-icons a:hover,
+footer div.footer-menu div a:hover {
+  color: var(--hover-light);
+  cursor: pointer;
+}
+
+header .search input {
+  border-radius: 4px;
+  height: 2em;
+  transition: 0.25s ease-in-out;
+}
+
+header .search input:hover {
+  transform: scale(1.1);
+}
+
+header .logo a img {
+  transition: 0.25s ease-in-out;
+}
+
+header .logo:hover a img {
+  transform: rotate(360deg);
+}
+
+/*
+* ********* *
+*  Colores  *
+* ********* *
+*/
+
+* {
+  color: white;
+}
+
+header,
+footer {
+  background-color: var(--dark-blue);
+}
+
+.footer-copy {
+  background-color: var(--primary-blue);
+}
+
+/*
+* ******************************** *
+*  Ancho inferior o igual a 600px  *
+* ******************************** *
+*/
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+header {
+  display: grid;
+  grid-template-areas: 'nav logo search';
+  padding: 0.5em;
+}
+
+header nav {
+  grid-area: nav;
+  display: none;
+}
+
+header .logo {
+  grid-area: logo;
+  display: grid;
+  place-items: center;
+}
+
+header .logo a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: 0.25s ease-in-out;
+}
+
+
+header .search {
+  grid-area: search;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto auto;
+}
+
+header .search button {
+  border: none;
+  background: none;
+  font-size: 1.25em;
+  margin-right: 0.5em;
+  transition: 0.25s ease-in-out;
+}
+
+header .search button:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+header .search button:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+header .search input {
+  display: none;
+}
+
+/* esto equivaldría al main */
+.cta-container {
+  display: grid;
+  justify-content: center;
+  align-content: end;
+  background-image: url(gato-fondo-e1701355048196.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  filter: sepia(30%);
+  height: 50em;
+}
+
+.cta-container h1 {
+  padding-bottom: 1em;
+  font-size: 4em;
+  color: var(--dark-blue);
+  text-shadow: 8px 4px 6px #CCB299;
+}
+
+footer {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+footer .footer-copy {
+  display: grid;
+  justify-items: center;
+  padding: 1em 0;
+}
+
+footer .footer-copy h3 {
+  margin: 0;
+  font-weight: 700;
+}
+
+footer .footer-copy .social-icons {
+  margin-top: 0.75em;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1em;
+}
+
+footer .footer-copy .social-icons a i {
+  font-size: 1.5em;
+}
+
+footer .footer-menu {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 1em;
+}
+
+footer .footer-menu div {
+  display: grid;
+  justify-items: center;
+}
+
+footer .footer-menu div a {
+  text-decoration: none;
+}
+
+footer .footer-menu div h3 {
+  font-weight: 700;
+}
+
+/*
+* ************************ *
+*  Ancho superior a 600px  *
+* ************************ *
+*/
+
+@media screen and (min-width: 601px) {
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 0.5em;
+  }
+
+  header nav {
+    display: grid;
+  }
+
+  header nav ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+  }
+
+  header nav ul li {
+    list-style: none;
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+  }
+
+  header .search {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+  }
+
+  header .search input {
+    display: block;
+  }
+
+  footer .footer-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    justify-items: start;
+    padding: 1.5em 0 2.5em 0;
+  }
+
+  footer .footer-menu div {
+    justify-items: start;
+  }
+
+  footer .footer-menu div h3 {
+    margin: 0.5em 0;
+  }
+}
