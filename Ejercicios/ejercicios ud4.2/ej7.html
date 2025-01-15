@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 7</title>
+  <style>
+    /*
+7. Entre las funciones que proporciona el atributo de animación, se implementa la
+posibilidad de que la animación se repita un número determinado de veces.
+Reescribe el código del apartado 3.2 para que la animación se repita cinco veces.
+Además, haz que en lugar de volver al inicio en cada iteración, vuelva del final al
+principio.
+    */
+
+    h1 {
+      animation-duration: 6s;
+      animation-name: estiloAnimacion;
+      animation-iteration-count: 5;
+      animation-direction: alternate;
+    }
+
+    @keyframes estiloAnimacion {
+      from {
+        margin-left: 50%;
+        width: 200%;
+      }
+
+      50% {
+        font-size: 200%;
+        margin-left: 10%;
+        width: 100%;
+      }
+
+      to {
+        margin-left: 0%;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>ESTO ES UNA ANIMACIÓN</h1>
+</body>
+
+</html>

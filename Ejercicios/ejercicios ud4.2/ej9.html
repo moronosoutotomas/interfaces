@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 9</title>
+  <style>
+    /*
+9. Diseña los códigos HTML y CSS necesarios para crear dos cuadrados cuyo lado sea
+de 30 px, de color rojo. En este caso, solo debe “animarse” el cuadrado sobre el que
+pase el ratón, que debe convertirse en un rectángulo de la misma altura y el doble
+de anchura de color azul.
+    */
+
+    .box {
+      display: block;
+      margin: 100px auto auto auto;
+      width: 30px;
+      height: 30px;
+      background-color: coral;
+
+      transition: 2 ease;
+    }
+
+    .box:hover {
+      animation: animateSquare 1s alternate;
+    }
+
+    @keyframes animateSquare {
+      to {
+        width: 60px;
+        background-color: blue;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+  <div class="box"></div>
+
+</body>
+
+</html>

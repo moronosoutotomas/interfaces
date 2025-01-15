@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 8</title>
+  <style>
+    /*
+8. Diseña los códigos HTML y CSS necesarios para que un rectángulo de dimensiones
+300 px de altura, por 400 px de anchura, disminuya su tamaño a la mitad al pasar el
+ratón sobre él. Además, el color debe cambiar de un instante al otro.
+    */
+
+    .box {
+      display: block;
+      margin: 100px auto auto auto;
+      width: 400px;
+      height: 300px;
+      background-color: coral;
+
+      transition: 2 ease;
+
+      animation: colorChange 3s infinite;
+    }
+
+    .box:hover {
+      transform: scale(.5);
+    }
+
+    @keyframes colorChange {
+      from {
+        background-color: coral;
+      }
+
+      20% {
+        background-color: red;
+      }
+
+      40% {
+        background-color: green;
+      }
+
+      60% {
+        background-color: blue;
+      }
+
+      80% {
+        background-color: yellow;
+      }
+
+      to {
+        background-color: orange;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="box"></div>
+
+</body>
+
+</html>
