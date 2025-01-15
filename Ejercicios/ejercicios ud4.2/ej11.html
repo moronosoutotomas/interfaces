@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 11</title>
+  <style>
+    /*
+11. Teclea el código de las animaciones 2D que se muestra en los apartados 3.4 y
+3.5, y observa cuál es su resultado (Giro X y Translate Z).
+    */
+
+    div {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #a8cf45;
+      margin: 15px 2px;
+      padding: 5px 40px;
+      text-align: center;
+      font-weight: bolder;
+      width: 80px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .flash:hover {
+      animation: 0.7s flash 6;
+    }
+
+    @keyframes flash {
+      50% {
+        opacity: 1;
+      }
+
+      25%,
+      75% {
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="flash">
+    <p>Flash</p>
+  </div>
+</body>
+
+</html>
