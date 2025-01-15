@@ -82,8 +82,24 @@
       transform-origin: center;
     }
 
-    .arrow:hover {
-      animation: 0.7s arrow 1;
+    .arrow::before {
+      transition-duration: 0.3;
+      content: '';
+
+      /* Características que forman el triángulo */
+      border-color: transparent #a8cf45 transparent transparent;
+      border-style: solid;
+      border-width: 15px 15px 15px 0;
+
+      /* Posicionamiento del triángulo */
+      left: 5px;
+      position: absolute;
+      top: 50%;
+      margin-top: -15px;
+    }
+
+    .arrow:hover::before {
+      animation: 1.5s arrow infinite;
     }
 
     .sombraMovil:hover {
@@ -310,6 +326,22 @@
       from {
         opacity: 0;
         transform: rotate(-200deg);
+      }
+    }
+
+    @keyframes arrow {
+      25% {
+        left: -15px;
+        transform: rotate(0deg);
+      }
+
+      65% {
+        left: -15px;
+        transform: rotate(180deg);
+      }
+
+      90% {
+        transform: rotate(180deg);
       }
     }
   </style>
