@@ -32,63 +32,54 @@
     }
 
     .chicle:hover {
-      animation: 0.7s chicle 1;
+      animation: 1s chicle 1;
     }
 
     .vibrador:hover {
-      animation: 0.7s vibrador 1;
+      animation: .25s vibrador 2;
     }
 
     .cartel:hover {
-      animation: 0.7s cartel 1;
+      animation: 1s cartel 1;
+      transform-origin: top center;
     }
 
     .balanceo:hover {
-      animation: 0.7s balanceo 1;
+      animation: 1s balanceo 1;
     }
 
     .vaiven:hover {
-      animation: 0.7s vaiven 1;
+      animation: 1s vaiven 1;
     }
 
     .caida:hover {
-      animation: 0.7s caida 1;
+      animation: 1s caida 1;
     }
 
     .inRotativo:hover {
-      animation: 0.7s inRotativo 1;
-    }
-
-    .outRotativo:hover {
-      animation: 0.7s outRotativo 1;
+      animation: 1s inRotativo 1;
     }
 
     .rebote:hover {
-      animation: 0.7s rebote 1;
+      animation: 1s rebote 1;
     }
 
     .reboteIn:hover {
-      animation: 0.7s reboteIn 1;
-    }
-
-    .reboteOut:hover {
-      animation: 0.7s reboteOut 1;
+      animation: 1s reboteIn 1;
     }
 
     .fadeIn:hover {
-      animation: 0.7s fadeIn 1;
+      animation: 2s fadeIn 1;
     }
 
     .velozIn:hover {
-      animation: 0.7s velozIn 1;
+      animation: 1s velozIn 1;
     }
 
-    .velozOut:hover {
-      animation: 0.7s velozOut 1;
-    }
-
+    /* quizá sobre el :hover */
     .giro:hover {
-      animation: 0.7s giro 1;
+      animation: 1s giro 1;
+      transform-origin: center;
     }
 
     .arrow:hover {
@@ -133,6 +124,192 @@
 
       60% {
         transform: scaleX(1.15) scaleY(0.85);
+      }
+    }
+
+    @keyframes vibrador {
+
+      5%,
+      25%,
+      45%,
+      65%,
+      85% {
+        transform: translateY(-2px);
+      }
+
+      15%,
+      25%,
+      55%,
+      75%,
+      95% {
+        transform: translateY(2px);
+      }
+
+      10%,
+      30%,
+      30%,
+      70%,
+      90% {
+        transform: translateX(-3px);
+      }
+
+      20%,
+      40%,
+      60%,
+      80% {
+        transform: translateX(3px);
+      }
+    }
+
+    @keyframes cartel {
+      20% {
+        transform: rotate(15deg);
+      }
+
+      40% {
+        transform: rotate(-10deg);
+      }
+
+      60% {
+        transform: rotate(5deg);
+      }
+
+      80% {
+        transform: rotate(-3deg);
+      }
+    }
+
+    @keyframes balanceo {
+      20% {
+        transform: scale(0.7) rotate(-6deg);
+      }
+
+      30%,
+      70% {
+        transform: scale(1.1) rotate(6deg);
+      }
+
+      50%,
+      90% {
+        transform: scale(1.1) rotate(-6deg);
+      }
+    }
+
+    @keyframes vaiven {
+      15% {
+        transform: rotate(-10deg) translateX(-25%);
+      }
+
+      30% {
+        transform: rotate(5deg) translateX(20%);
+      }
+
+      45% {
+        transform: rotate(-3deg) translateX(-10%);
+      }
+
+      60% {
+        transform: rotate(2deg) translateX(5%);
+      }
+
+      75% {
+        transform: rotate(-1deg) translateX(-3%);
+      }
+    }
+
+    @keyframes caida {
+
+      20%,
+      60% {
+        transform: rotate(80deg);
+      }
+
+      40% {
+        transform: rotate(60deg);
+      }
+
+      80% {
+        opacity: 1;
+        transform: rotate(60deg);
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(400px);
+      }
+    }
+
+    @keyframes inRotativo {
+      from {
+        opacity: 0;
+        transform: translateY(-100%) rotate(-260deg);
+      }
+    }
+
+    @keyframes rebote {
+
+      20%,
+      50%,
+      80% {
+        transform: translateY(0px);
+      }
+
+      40% {
+        transform: translateY(-45px);
+      }
+
+      60% {
+        transform: translateY(-25px);
+      }
+    }
+
+    @keyframes reboteIn {
+
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+
+      50% {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      70% {
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes velozIn {
+      from {
+        opacity: 0;
+        transform: translateX(-200%) skewX(30deg);
+      }
+
+      60% {
+        opacity: 1;
+        transform: translateX(-20%) skewX(-30deg);
+      }
+
+      80% {
+        transform: translateX(0%) skewX(15deg);
+      }
+    }
+
+    @keyframes giro {
+      from {
+        opacity: 0;
+        transform: rotate(-200deg);
       }
     }
   </style>
@@ -184,20 +361,12 @@
     <p>reboteIn</p>
   </div>
 
-  <div class="reboteOut">
-    <p>reboteOut</p>
-  </div>
-
   <div class="fadeIn">
     <p>fadeIn</p>
   </div>
 
   <div class="velozIn">
     <p>velozIn</p>
-  </div>
-
-  <div class="velozOut">
-    <p>velozOut</p>
   </div>
 
   <div class="giro">
