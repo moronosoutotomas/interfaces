@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 13</title>
+  <style>
+    .bar-container {
+      display: block;
+      padding: 10px;
+      background-color: rgb(49, 49, 150);
+      border-radius: 10px;
+    }
+
+    .bar {
+      background-color: rgb(218, 235, 215);
+      border-radius: 5px;
+      height: 25px;
+      margin: auto;
+    }
+
+    .bar {
+      animation: 5s progress 1;
+    }
+
+    @keyframes progress {
+      from {
+        transform: scaleX(0%);
+      }
+
+      to {
+        transform: scaleX(100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bar-container">
+    <div class="bar"></div>
+  </div>
+</body>
+
+</html>

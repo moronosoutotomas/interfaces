@@ -99,11 +99,47 @@
     }
 
     .arrow:hover::before {
-      animation: 1.5s arrow infinite;
+      animation: 2s arrow infinite;
+    }
+
+    .sombraMovil {
+      transform: translateX(0);
     }
 
     .sombraMovil:hover {
-      animation: 0.7s sombraMovil 1;
+      transform: translateY(-6px);
+      animation: 1.5s moverCaja infinite;
+    }
+
+    @keyframes moverCaja {
+      50% {
+        transform: translateY(-3px);
+      }
+    }
+
+    .sombraMovil::before {
+      position: absolute;
+      content: '';
+      top: 100%;
+      left: 5%;
+      height: 10px;
+      width: 90%;
+      opacity: 0;
+      background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+      transition-duration: 0.3s;
+    }
+
+    .sombraMovil:hover::before {
+      opacity: 0.4;
+      transform: translateY(6px);
+      animation: 1.5 moverSombra infinite;
+    }
+
+    @keyframes moverSombra {
+      50% {
+        opacity: 1;
+        transform: translateY(3px);
+      }
     }
 
     @keyframes flash {
@@ -331,17 +367,60 @@
 
     @keyframes arrow {
       25% {
-        left: -15px;
+        left: -20px;
         transform: rotate(0deg);
       }
 
       65% {
-        left: -15px;
+        left: -20px;
         transform: rotate(180deg);
       }
 
       90% {
         transform: rotate(180deg);
+      }
+    }
+
+    .girox:hover {
+      animation: 1.5s girox infinite;
+      backface-visibility: visible;
+    }
+
+    @keyframes girox {
+      0% {
+        opacity: 0.5;
+        transform: perspective(200px) rotateX(150deg);
+      }
+
+      40% {
+        transform: perspective(200px) rotateX(-20deg);
+      }
+
+      70% {
+        transform: perspective(200px) rotateX(20deg);
+      }
+    }
+
+    .translate-z:hover {
+      animation: 1.5s giro3d 1;
+      backface-visibility: visible;
+    }
+
+    @keyframes giro3d {
+      40% {
+        transform: perspective(300px) translateZ(120px) rotateY(170deg);
+      }
+
+      50% {
+        transform: perspective(300px) translateZ(120px) rotateY(190deg);
+      }
+
+      80% {
+        transform: perspective(300px) translateZ(0px) rotateY(360deg);
+      }
+
+      100% {
+        transform: perspective(300px) rotateY(360deg);
       }
     }
   </style>
@@ -350,67 +429,75 @@
 <body>
 
   <div class="flash">
-    <p>flash</p>
+    <p>Flash</p>
   </div>
 
   <div class="click">
-    <p>click</p>
+    <p>Click</p>
   </div>
 
   <div class="chicle">
-    <p>chicle</p>
+    <p>Chicle</p>
   </div>
 
   <div class="vibrador">
-    <p>vibrador</p>
+    <p>Vibrador</p>
   </div>
 
   <div class="cartel">
-    <p>cartel</p>
+    <p>Cartel</p>
   </div>
 
   <div class="balanceo">
-    <p>balanceo</p>
+    <p>Balanceo</p>
   </div>
 
   <div class="vaiven">
-    <p>vaiven</p>
+    <p>Vaiven</p>
   </div>
 
   <div class="caida">
-    <p>caida</p>
+    <p>Caida</p>
   </div>
 
   <div class="inRotativo">
-    <p>inRotativo</p>
+    <p>Rotativo-in</p>
   </div>
 
   <div class="rebote">
-    <p>rebote</p>
+    <p>Rebote</p>
   </div>
 
   <div class="reboteIn">
-    <p>reboteIn</p>
+    <p>Rebote-in</p>
   </div>
 
   <div class="fadeIn">
-    <p>fadeIn</p>
+    <p>Fade-in</p>
   </div>
 
   <div class="velozIn">
-    <p>velozIn</p>
+    <p>Veloz-in</p>
   </div>
 
   <div class="giro">
-    <p>giro</p>
+    <p>Giro</p>
   </div>
 
   <div class="arrow">
-    <p>arrow</p>
+    <p>Arrow</p>
   </div>
 
   <div class="sombraMovil">
-    <p>sombraMovil</p>
+    <p>Sombra movil</p>
+  </div>
+
+  <div class="girox">
+    <p>Giro X</p>
+  </div>
+
+  <div class="translate-z">
+    <p>Translate Z</p>
   </div>
 </body>
 
