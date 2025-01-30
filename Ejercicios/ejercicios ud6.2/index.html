@@ -4,67 +4,179 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejercicios UD 6.2</title>
+  <title>Ejercicios UD 6.2 - Técnicas ARIA</title>
   <style>
     html {
       font-family: sans-serif;
       background-color: lightblue;
     }
+
+    body {
+      padding: 0 15em;
+      padding-bottom: 50em;
+    }
+
+    .enunciado {
+      margin-top: 3em;
+      padding: .25em;
+      background-color: thistle;
+      font-size: 0.95em;
+    }
   </style>
 </head>
 
 <body>
+  <h1>Ejercicios UD 6.2 - Técnicas ARIA</h1>
 
-  <p>1. Crea un encabezado principal de una página utilizando un elemento div que tenga el
+  <p class="enunciado">1. Crea un encabezado principal de una página utilizando un elemento div que
+    tenga el
     rol heading y especifica el nivel con aria-level.</p>
+  <div aria-level="1">Nivel 1</div>
 
-  <p>2. Crea una lista con el rol list y utiliza elementos div con el rol listitem.</p>
 
-  <p>3. Crea una barra de navegación utilizando un elemento div con el rol navigation.</p>
+  <p class="enunciado">2. Crea una lista con el rol list y utiliza elementos div con el rol listitem.</p>
+  <div role="list">
+    <div role="listitem">Item 1</div>
+    <div role="listitem">Item 2</div>
+    <div role="listitem">Item 3</div>
+  </div>
 
-  <p>4. Divide el contenido principal de una página en varias regiones utilizando un div con
+
+  <p class="enunciado">3. Crea una barra de navegación utilizando un elemento div con el rol navigation.</p>
+  <div role="navigation">
+    <ul>
+      <li>Inicio</li>
+      <li>Galería</li>
+      <li>Sobre nosotros</li>
+    </ul>
+  </div>
+
+
+  <p class="enunciado">4. Divide el contenido principal de una página en varias regiones utilizando un div con
     el rol region y el atributo aria-labelledby.</p>
+  <div role="region" id="informacion-coche" aria-live="polite">
+    <h4 id="modelo">No se ha seleccionado nada</h4>
+    <span id="descripcion-modelo">Selecciona un modelo para ver su
+      descripción.</span>
+  </div>
 
-  <p>7. Diseña un botón utilizando un span con el rol button y el atributo aria-disabled</p>
 
-  <p>11. Crea un cuadro de diálogo utilizando un div con el rol alertdialog y los atributos
+  <p class="enunciado">7. Diseña un botón utilizando un span con el rol button y el atributo aria-disabled.</p>
+  <span role="button" aria-disabled="">Botoncito</span>
+
+
+  <p class="enunciado">11. Crea un cuadro de diálogo utilizando un div con el rol alertdialog y los atributos
     aria-labelledby y aria-describedby.</p>
+  <div role="alertdialog" aria-labelledby="dialogTitle" aria-describedby="dialogDescription">
+    <h2 id="dialogTitle">Confirmación</h2>
+    <p id="dialogDescription">¿Estás seguro de que deseas bla bla bla? Esa acción es irreversible.</p>
+    <button>Aceptar</button>
+    <button>Cancelar</button>
+  </div>
 
-  <p>13. Crea una casilla de verificación utilizando un span con el rol checkbox</p>
 
-  <p>15. Crea un sistema de pestañas con elementos genéricos div y utiliza los roles
+  <p class="enunciado">13. Crea una casilla de verificación utilizando un span con el rol checkbox.</p>
+  <span role="checkbox" aria-checked="false" tabindex="0" aria-labelledby="checkbox-label"></span>
+  <input type="checkbox" name="box" id="box">
+  <span id="checkbox-label">Acepto los términos y condiciones</span>
+
+
+  <p class="enunciado">15. Crea un sistema de pestañas con elementos genéricos div y utiliza los roles
     tablist, tab y tabpanel. Utiliza también el atributo aria-selected para
     determinar cuál de ellas está seleccionada, y el atributo necesario para que los
     elementos de la tablist puedan debe ser enfocados y ser accesibles a través de la
     navegación secuencial del teclado.</p>
 
-  <p>17. Diseña un formulario accesible que incluya un campo de texto (textbox), un área de
-    texto multilinea (aria-multiline), un botón, y una casilla de verificación
-    (checkbox). También deberás usar los atributos aria-checked, aria-
-    describedby. El checkbox además deberá ser enfocado y accesible a través de la
-    navegación secuencial del teclado.</p>
+  <div role="tablist" aria-label="Ejemplo de pestañas">
+    <div role="tab" id="tab1" aria-selected="true" tabindex="0" aria-controls="panel1">
+      Pestaña 1
+    </div>
+    <div role="tab" id="tab2" aria-selected="false" tabindex="-1" aria-controls="panel2">
+      Pestaña 2
+    </div>
+    <div role="tab" id="tab3" aria-selected="false" tabindex="-1" aria-controls="panel3">
+      Pestaña 3
+    </div>
+  </div>
 
-  <p>18. Crea una tabla que utilice roles como table, row, cell y atributos como aria-
+  <div role="tabpanel" id="panel1" aria-labelledby="tab1" tabindex="0">
+    Contenido de la Pestaña 1
+  </div>
+  <div role="tabpanel" id="panel2" aria-labelledby="tab2" tabindex="0" hidden>
+    Contenido de la Pestaña 2
+  </div>
+  <div role="tabpanel" id="panel3" aria-labelledby="tab3" tabindex="0" hidden>
+    Contenido de la Pestaña 3
+  </div>
+
+
+  <p class="enunciado">17. Diseña un formulario accesible que incluya un campo de texto (textbox), un área de
+    texto multilinea (aria-multiline), un botón, y una casilla de verificación (checkbox). También deberás
+    usar los atributos aria-checked, aria-describedby. El checkbox además deberá ser enfocado y accesible a
+    través de la navegación secuencial del teclado.</p>
+  <form aria-labelledby="form-title">
+    <h2 id="form-title">Formulario Accesible</h2>
+
+    <!-- Campo de texto (textbox) -->
+    <div>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" aria-describedby="nombre-help"><br>
+      <small id="nombre-help" class="help-text">Introduce tu nombre completo.</small>
+    </div>
+
+    <!-- Área de texto multilínea -->
+    <div>
+      <label for="comentario">Comentario:</label>
+      <textarea id="comentario" name="comentario" aria-multiline="true"
+        aria-describedby="comentario-help"></textarea><br>
+      <small id="comentario-help" class="help-text">Escribe tus comentarios aquí.</small>
+    </div>
+
+    <!-- Casilla de verificación (checkbox) -->
+    <div>
+      <span role="checkbox" id="acepto" aria-checked="false" tabindex="0" aria-labelledby="acepto-label"
+        aria-describedby="acepto-help"></span><br>
+      <input type="checkbox" name="box" id="box">
+      <span id="acepto-label">Acepto los términos y condiciones</span><br>
+      <small id="acepto-help" class="help-text">(Debes aceptar los términos para continuar).</small>
+    </div>
+
+    <!-- Botón de envío -->
+    <div><br>
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+
+
+  <p class="enunciado">18. Crea una tabla que utilice roles como table, row, cell y atributos como aria-
     describedby para proporcionar información adicional sobre los datos.</p>
 
-  <p>19. Crea una galería de imágenes utilizando el rol figure para cada imagen, img para las
+
+
+  <p class="enunciado">19. Crea una galería de imágenes utilizando el rol figure para cada imagen, img para las
     imágenes, y utiliza atributos como aria-describedby y aria-labelledby para
     proporcionar detalles sobre cada imagen. Utiliza también los roles de figure y
     figcaption, así como los de list y listitem.</p>
 
-  <p>20. Crea una barra de herramientas (toolbar) accesible que contenga botones para
+
+
+  <p class="enunciado">20. Crea una barra de herramientas (toolbar) accesible que contenga botones para
     formato de texto, como "negrita", "cursiva" y "subrayado". Usa el rol toolbar, button
     y el atributo aria-pressed para indicar el estado de activación de cada botón. Ten
     en cuenta también el atributo aria-label para algunos elementos.</p>
 
-  <p>21. Crea una sección de contenido que esté cargando datos y utiliza el atributo aria-
+
+
+  <p class="enunciado">21. Crea una sección de contenido que esté cargando datos y utiliza el atributo aria-
     busy para indicar su estado. Una vez cargados, muestra el contenido actualizado.
     Utiliza también el rol region, y el atributo aria-label.</p>
 
-  <p>22. Crea una región principal que muestre el contenido principal de una página, y añade
+
+
+  <p class="enunciado">22. Crea una región principal que muestre el contenido principal de una página, y añade
     una región complementaria (complementary) que ofrezca información adicional
     relacionada con el contenido principal. Usa aria-labelledby para vincular la región
-    complementaria con un encabezado descriptivo</p>
+    complementaria con un encabezado descriptivo.</p>
 
 </body>
 
