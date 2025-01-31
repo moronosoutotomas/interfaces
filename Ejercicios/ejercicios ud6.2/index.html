@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -13,7 +13,7 @@
 
     body {
       padding: 0 15em;
-      padding-bottom: 50em;
+      padding-bottom: 40em;
     }
 
     .enunciado {
@@ -21,6 +21,18 @@
       padding: .25em;
       background-color: thistle;
       font-size: 0.95em;
+    }
+
+    .alumnos {
+      background: #fff;
+      padding: 1em;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: .5em 1em;
+        border: 1px solid black;
+      }
     }
   </style>
 </head>
@@ -125,8 +137,9 @@
     </div>
 
     <!-- Área de texto multilínea -->
-    <div>
+    <div><br>
       <label for="comentario">Comentario:</label>
+      <br>
       <textarea id="comentario" name="comentario" aria-multiline="true"
         aria-describedby="comentario-help"></textarea><br>
       <small id="comentario-help" class="help-text">Escribe tus comentarios aquí.</small>
@@ -151,6 +164,33 @@
   <p class="enunciado">18. Crea una tabla que utilice roles como table, row, cell y atributos como aria-
     describedby para proporcionar información adicional sobre los datos.</p>
 
+  <div>
+    <table class="alumnos">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th colspan="2">Apellidos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Lara</td>
+          <td>Comesaña</td>
+          <td>Varela</td>
+        </tr>
+        <tr>
+          <td>Tomás</td>
+          <td>Moroño</td>
+          <td>Souto</td>
+        </tr>
+        <tr>
+          <td>David</td>
+          <td>Fernández</td>
+          <td>González</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 
   <p class="enunciado">19. Crea una galería de imágenes utilizando el rol figure para cada imagen, img para las
