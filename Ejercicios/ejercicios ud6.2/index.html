@@ -24,7 +24,7 @@
     }
 
     .alumnos {
-      background: #fff;
+      background-color: #fff;
       padding: 1em;
       border-collapse: collapse;
 
@@ -33,6 +33,14 @@
         padding: .5em 1em;
         border: 1px solid black;
       }
+    }
+
+    .fotito {
+      display: flex;
+      gap: 1em;
+      padding: .5em;
+      align-items: center;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -128,15 +136,11 @@
     través de la navegación secuencial del teclado.</p>
   <form aria-labelledby="form-title">
     <h2 id="form-title">Formulario Accesible</h2>
-
-    <!-- Campo de texto (textbox) -->
     <div>
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" aria-describedby="nombre-help"><br>
       <small id="nombre-help" class="help-text">Introduce tu nombre completo.</small>
     </div>
-
-    <!-- Área de texto multilínea -->
     <div><br>
       <label for="comentario">Comentario:</label>
       <br>
@@ -144,8 +148,6 @@
         aria-describedby="comentario-help"></textarea><br>
       <small id="comentario-help" class="help-text">Escribe tus comentarios aquí.</small>
     </div>
-
-    <!-- Casilla de verificación (checkbox) -->
     <div>
       <span role="checkbox" id="acepto" aria-checked="false" tabindex="0" aria-labelledby="acepto-label"
         aria-describedby="acepto-help"></span><br>
@@ -153,8 +155,6 @@
       <span id="acepto-label">Acepto los términos y condiciones</span><br>
       <small id="acepto-help" class="help-text">(Debes aceptar los términos para continuar).</small>
     </div>
-
-    <!-- Botón de envío -->
     <div><br>
       <button type="submit">Enviar</button>
     </div>
@@ -168,8 +168,8 @@
     <table class="alumnos">
       <thead>
         <tr>
-          <th>Nombre</th>
-          <th colspan="2">Apellidos</th>
+          <th scope="col">Nombre</th>
+          <th scope="col" colspan="2">Apellidos</th>
         </tr>
       </thead>
       <tbody>
@@ -193,11 +193,50 @@
   </div>
 
 
-  <p class="enunciado">19. Crea una galería de imágenes utilizando el rol figure para cada imagen, img para las
-    imágenes, y utiliza atributos como aria-describedby y aria-labelledby para
-    proporcionar detalles sobre cada imagen. Utiliza también los roles de figure y
-    figcaption, así como los de list y listitem.</p>
+  <p class="enunciado">19. Crea una galería de imágenes utilizando el rol <em>figure</em> para cada imagen, <em>img</em>
+    para las imágenes, y utiliza atributos como <em>aria-describedby</em> y <em>aria-labelledby</em> para
+    proporcionar detalles sobre cada imagen. Utiliza también los roles de <em>figure</em> y
+    <em>figcaption</em>, así como los de <em>list</em> y <em>listitem</em>.
+  </p>
 
+  <h2>Galería de Imágenes</h2>
+  <div class="galeria" role="list">
+    <figure role="listitem" class="fotito">
+      <img src="https://placehold.co/100x100/png" alt="Paisaje montañoso" aria-describedby="descripcion1"
+        aria-labelledby="titulo1">
+      <figcaption>
+        <span id="titulo1" role="cabecera">Paisaje Montañoso</span>
+        <p id="descripcion1">Un hermoso paisaje montañoso.</p>
+      </figcaption>
+    </figure>
+
+    <figure role="listitem" class="fotito">
+      <img src="https://placehold.co/100x100/png" alt="Ciudad moderna" aria-describedby="descripcion2"
+        aria-labelledby="titulo2">
+      <figcaption>
+        <span id="titulo2" role="cabecera">Ciudad Moderna</span>
+        <p id="descripcion2">Una vista panorámica de una ciudad moderna.</p>
+      </figcaption>
+    </figure>
+
+    <figure role="listitem" class="fotito">
+      <img src="https://placehold.co/100x100/png" alt="Playa tropical" aria-describedby="descripcion3"
+        aria-labelledby="titulo3">
+      <figcaption>
+        <span id="titulo3" role="cabecera">Playa Tropical</span>
+        <p id="descripcion3">Una playa paradisíaca con palmeras.</p>
+      </figcaption>
+    </figure>
+
+    <figure role="listitem" class="fotito">
+      <img src="https://placehold.co/100x100/png" alt="Bosque otoñal" aria-describedby="descripcion4"
+        aria-labelledby="titulo4">
+      <figcaption>
+        <span id="titulo4" role="cabecera">Bosque Otoñal</span>
+        <p id="descripcion4">Un bosque en otoño con hojas de colores cálidos.</p>
+      </figcaption>
+    </figure>
+  </div>
 
 
   <p class="enunciado">20. Crea una barra de herramientas (toolbar) accesible que contenga botones para
@@ -205,18 +244,66 @@
     y el atributo aria-pressed para indicar el estado de activación de cada botón. Ten
     en cuenta también el atributo aria-label para algunos elementos.</p>
 
+  <div role="toolbar">
+    <button aria-label="Texto en negrita">negrita</button>
+    <button aria-label="Texto en cursiva">cursiva</button>
+    <button aria-label="Texto en subrayado">subrayado</button>
+  </div>
 
 
   <p class="enunciado">21. Crea una sección de contenido que esté cargando datos y utiliza el atributo aria-
     busy para indicar su estado. Una vez cargados, muestra el contenido actualizado.
     Utiliza también el rol region, y el atributo aria-label.</p>
 
+  <h2>Sección de contenido cargando</h2>
+  <div class="loading-section" role="region" aria-label="Sección de contenido" aria-busy="true">
+    <div class="loading-message" aria-live="polite">
+      Cargando datos, por favor espere...
+    </div>
+    <div class="content" aria-live="polite">
+      <!-- Aquí se mostrará el contenido cargado -->
+    </div>
+  </div>
+
+  <script>
+    // Simulación de carga de datos con un retraso de 3 segundos
+    setTimeout(() => {
+      const section = document.querySelector('.loading-section');
+      const loadingMessage = document.querySelector('.loading-message');
+      const content = document.querySelector('.content');
+
+      // Actualizar el contenido
+      content.innerHTML = `
+                    <h3>Contenido cargado</h3>
+                    <p>Los datos se han cargado correctamente:</p>
+                    <ul>
+                        <li>Dato 1: Información importante</li>
+                        <li>Dato 2: Más detalles relevantes</li>
+                        <li>Dato 3: Última actualización</li>
+                    </ul>
+                `;
+
+      // Ocultar el mensaje de carga y mostrar el contenido
+      loadingMessage.style.display = 'none';
+      content.style.display = 'block';
+
+      // Indicar que la sección ya no está ocupada
+      section.setAttribute('aria-busy', 'false');
+    }, 3000); // Simula una carga de 3 segundos
+  </script>
 
 
   <p class="enunciado">22. Crea una región principal que muestre el contenido principal de una página, y añade
     una región complementaria (complementary) que ofrezca información adicional
     relacionada con el contenido principal. Usa aria-labelledby para vincular la región
     complementaria con un encabezado descriptivo.</p>
+
+  <div role="region">
+    <p>Soy la región principal</p>
+    <div role="complementary">
+      <p>Soy la región complementaria y colaboro en la ejecución del ejercicio con la región principal</p>
+    </div>
+  </div>
 
 </body>
 
