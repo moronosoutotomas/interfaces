@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-  <title>Title</title>
+  <title>Ejercicio 5 - Formulario</title>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -24,11 +24,11 @@ d. Dos radiobuttons
   
 -->
 
-
-  <div class="container mt-5">
+  <div class="container mt-5 col-4">
+    <h2 class="mb-3">Formulario responsive</h2>
     <form>
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email</label>
+        <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
       </div>
 
@@ -39,33 +39,32 @@ d. Dos radiobuttons
 
       <div class="mb-3 form-floating">
         <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-        <label for="floatingTextarea">Comentarios</label>
+        <label for="floatingTextarea">Escribe aqui tu reseña ...</label>
       </div>
 
       <div class="mb-3">
-        <!-- TODO -->
+        <select class="form-select" aria-label="Default select example">
+          <option selected>-- Menú --</option>
+          <option value="1">Peixe</option>
+          <option value="2">Filete</option>
+        </select>
       </div>
 
       <div class="mb-3">
-        <!-- TODO -->
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+          <label class="form-check-label" for="inlineRadio1">Bolognesa</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+          <label class="form-check-label" for="inlineRadio2">Pizza</label>
+        </div>
+
       </div>
 
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   <!-- Bootstrap JavaScript Libraries -->
